@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhilip | Terminal Portfolio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000;
+      color: #33ff33;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .terminal {
+      border: 2px solid #33ff33;
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(51, 255, 51, 0.3);
+    }
+
+    .prompt::before {
+      content: "dhilip@portfolio:~$ ";
+      color: #00ffaa;
+    }
+
+    a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background: #33ff33;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .section-title {
+      color: #00ffaa;
+      margin-top: 20px;
+    }
+
+    .scanline::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    }
+  </style>
+</head>
+<body class="scanline">
+
+  <div class="container my-5">
+    <div class="terminal">
+
+      <p class="prompt">whoami</p>
+      <p>dhilip — Student | FOSS Activist | Django Developer</p>
+
+      <p class="prompt">cat about.txt</p>
+      <p>
+        Passionate Linux user and open-source contributor.
+        I build backend systems using Python & Django and love terminal-based workflows.
+      </p>
+
+      <p class="prompt">ls skills/</p>
+      <ul>
+        <li>Python</li>
+        <li>Django</li>
+        <li>HTML / CSS / Bootstrap</li>
+        <li>Linux / Bash</li>
+        <li>Git & GitHub</li>
+      </ul>
+
+      <p class="prompt">ls projects/</p>
+      <ul>
+        <li>Library Management System (Django)</li>
+        <li>Student Data Upload via Excel</li>
+        <li>Blog & Portfolio Websites</li>
+        <li>Open-source Contributions</li>
+      </ul>
+
+      <p class="prompt">cat contact.txt</p>
+      <p>
+        GitHub: <a href="https://github.com/dhilipmpms" target="_blank">github.com/dhilipmpms</a><br>
+        Email: dhilipmpms@gmail.com
+      </p>
+
+      <p class="prompt">_ <span class="cursor"> </span></p>
+
+    </div>
+  </div>
+
+</body>
+</html>
